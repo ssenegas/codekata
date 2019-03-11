@@ -31,11 +31,11 @@ public class FizzBuzz {
 		return answer;
 	}
 
-	private static boolean isMultipleOfFive(int i) {
-		return i % 5 == 0;
+	private static boolean isMultipleOfFive(int number) {
+		return number % 5 == 0;
 	}
 
-	private static boolean isMultipleOfThree(int i) {
-		return i % 3 == 0;
+	private static boolean isMultipleOfThree(int number) {
+		return number % 3 == 0;
 	}
 }
