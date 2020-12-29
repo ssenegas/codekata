@@ -1,7 +1,7 @@
 package kata.tennis;
 
 import static org.hamcrest.core.Is.is;
-import static org.junit.Assert.assertThat;
+import static org.hamcrest.MatcherAssert.assertThat;
 
 import org.junit.Test;
 
@@ -16,7 +16,7 @@ import kata.tennis.state.ThirtyLoveState;
 public class TennisGameTest {
 	
 	@Test
-	public void shouldReturnLoveLoveWhenNoPlayerScored() {
+	public void shouldReturnLoveAllWhenNoPlayerScored() {
 		TennisGameBuilder builder = new TennisGameBuilder();
 		
 		assertThat(builder.build().score(), is("Love-all"));
