@@ -28,7 +28,7 @@ public class FizzBuzz {
 			result += "Buzz";
 		}
 
-		return result.isEmpty() ? String.valueOf(number) : result;
+		return !result.isEmpty() ? result : String.valueOf(number);
 	}
 
 	private static boolean isMultipleOfFive(int number) {
