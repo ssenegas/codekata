@@ -19,16 +19,16 @@ public class FizzBuzz {
 	public static String of(int number) {
 		if (number == 0) throw new IllegalArgumentException("Number is smaller than 1");
 		
-		String answer = String.valueOf(number);
+		String result = "";
 
-		if (isMultipleOfThree(number) && isMultipleOfFive(number)) {
-			answer = "FizzBuzz";
-		} else if (isMultipleOfThree(number)) {
-			answer = "Fizz";
-		} else if (isMultipleOfFive(number)) {
-			answer = "Buzz";
+		if (isMultipleOfThree(number)) {
+			result += "Fizz";
 		}
-		return answer;
+		if (isMultipleOfFive(number)) {
+			result += "Buzz";
+		}
+
+		return result.isEmpty() ? String.valueOf(number) : result;
 	}
 
 	private static boolean isMultipleOfFive(int number) {
